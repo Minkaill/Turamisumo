@@ -26,6 +26,7 @@ app.use(require('./routes/user.route.js'))
 app.use(require('./routes/admin.route'))
 app.use(require("./routes/table.route.js"));
 app.use(require("./routes/cart.route.js"));
+app.use(require("./routes/number.route"))
 
 mongoose
   .connect(process.env.MONGO_SERVER)
