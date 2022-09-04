@@ -35,18 +35,18 @@ module.exports.tableController = {
       res.json(e);
     }
   },
-  postTableChange:async (req, res) => {
-     try {
-              const { userId } = req.params;
-              const setUser = await User.findById(userId);
-             const {id, booking} = req.body;
-             const idBooking = await Table.findById(id);
-             await Table.findByIdAndUpdate(idBooking._id, {booking: !booking});
-             res.json({message:"Success"})
-     } catch (e) {
-       res.json(e);
-     }
-  }
+  postTableChange: async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const setUser = await User.findById(userId);
+      const { id, booking } = req.body;
+      const idBooking = await Table.findById(id);
+      await Table.findByIdAndUpdate(idBooking._id, { booking: !booking });
+      res.json({ message: "Success" });
+    } catch (e) {
+      res.json(e);
+    }
+  },
   // postRoomType: async (req, res) => {
   //     try {
   //         const { name, images, price } = req.body
