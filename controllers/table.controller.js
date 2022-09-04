@@ -12,13 +12,7 @@ module.exports.tableController = {
       res.json(await Table.find());
     } catch (e) {
       res.json(e);
-    bookingTable: async (req, res) => {
-        try {
-            
-        } catch (e) {
-            res.json(e)
-        }
-    },
+    }},
     postTable: async (req, res) => {
         try {
             for (let i = 15; i < 16; i++) {
@@ -40,29 +34,7 @@ module.exports.tableController = {
         } catch (e) {
             res.json(e)
         }
-    }
-  },
-  postTable: async (req, res) => {
-    try {
-      for (let i = 15; i < 16; i++) {
-        console.log(i);
-        await Table.create({
-          number: i,
-          booking: false,
-        });
-      }
-      res.json("готово");
-    } catch (e) {
-      res.json(e);
-    }
-  },
-  getTable: async (req, res) => {
-    try {
-      res.json(await Table.find());
-    } catch (e) {
-      res.json(e);
-    }
-  },
+    },
   postTableChange:async (req, res) => {
      try {
               const { userId } = req.params;
