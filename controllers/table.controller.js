@@ -10,9 +10,10 @@ module.exports.tableController = {
         booking: !setTable.booking,
       });
       res.json(await Table.find());
-    } catch (e) {
-      res.json(e);
-    }},
+    } catch (e){
+      res.json(e)
+    }
+    },
     postTable: async (req, res) => {
         try {
             for (let i = 15; i < 16; i++) {
