@@ -47,6 +47,7 @@ module.exports.tableController = {
       res.json(e);
     }
   },
+
   // postRoomType: async (req, res) => {
   //     try {
   //         const { name, images, price } = req.body
